@@ -1,0 +1,52 @@
+
+<!--ITEM DETAILS TEMPLATE-->
+<ng-template #myItemDetailsTemplate let-data>
+  <div *ngIf="data" fxLayout="row" style="height: 100%">
+    <div fxShow="true" fxHide.xs="true" class="primary-background"
+         style="margin:10px; text-align:center">
+      <div style="display:inline-block; margin:15px;">
+        <img class="avatar" style="width: 150px; height: 150px;" [src]="data.jsonData.fullSrc"/>
+      </div>
+      <div class="primary-foreground" style="font-size:20px; margin-top: 15px">{{data.jsonData.name}}</div>
+    </div>
+  <div style="margin-top:50px; margin-left: 20px; margin-right: 20px; height: 280px; overflow: auto">
+    <p style="word-wrap: break-spaces">{{data.jsonData.fullDesc}}</p>
+  </div>
+  </div>
+</ng-template>
+
+  <!--ITEM CARD TEMPLATE-->
+<ng-template #myItemTemplate let-data let-deleteCard>
+  <mat-card style="min-width: 300px">
+    <mat-card-header>
+      <div fxLayout="row">
+        <div style="transform: translate(-20px,-10px)">
+        <img class="avatar" style="width:75px; height: 75px" [src]="data.jsonData.avatarSrc"/>
+        </div>
+        <div fxLayout="column" style="margin-left:10px">
+          <span class="foreground" style="font-size:20px">{{data.jsonData.name}}</span>
+          <span class="foreground" style="font-size:16px">{{data.jsonData.subtitle}}</span>
+        </div>
+      </div>
+    </mat-card-header>
+    <mat-card-content>
+    </mat-card-content>
+  </mat-card>
+</ng-template>
+
+<!-- MAIN APP -->
+<div class="mat-app-background app-container">
+  <mat-toolbar class="mat-elevation-z4" style="z-index: 5; position: relative" color="primary">
+    <h1>Pointer Panel Demo</h1>
+    <span style="margin-right: 20px"></span>
+    <button mat-button (click)="addCard()">ADD</button>
+  </mat-toolbar>
+  <div class="app-body">
+    <pointer-panel-list [itemTemplate]="myItemTemplate"
+                   [itemDetailsTemplate]="myItemDetailsTemplate"
+                   [dataSource]="$cards">
+    </pointer-panel-list>
+  </div>
+</div>
+
+

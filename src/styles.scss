@@ -1,0 +1,24 @@
+@import '~@angular/material/theming';
+@import './app/app.component.scss';
+
+@import 'app/pointer-panel-list/pointer-panel-details';
+
+// Include non-theme styles for core.
+@include mat-core();
+
+// Define a theme.
+$primary: mat-palette($mat-deep-purple);
+$accent:  mat-palette($mat-amber, A200, A100, A400);
+
+//change to mat-light-theme for light theme
+$theme: mat-dark-theme($primary, $accent);
+
+@include angular-material-theme($theme);
+
+// Include all theme styles for the components.
+@include app-component-theme($theme);
+@include details-panel-theme($theme);/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: 'Roboto', sans-serif; }
+
