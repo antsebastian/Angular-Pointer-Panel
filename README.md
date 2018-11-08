@@ -9,28 +9,28 @@ Live Demo: https://pointerpaneldemo2.firebaseapp.com/
 ### Getting Started
 
 Pointer Panel requires a collection of items and two templates as shown below.
+```html
+<!--ITEM DETAILS TEMPLATE-->
+<ng-template #myItemDetailsTemplate let-dataDetails>
+  <p>{{dataDetails.jsonData.fullDesc}}</p>
+<ng-template>
 
-\&lt;!--ITEM DETAILS TEMPLATE--\&gt;
-\&lt;ng-template #myItemDetailsTemplate let-dataDetails\&gt;
-  \&lt;p\&gt;{{dataDetails.jsonData.fullDesc}}\&lt;/p\&gt;
-\&lt;/ng-template\&gt;
+<!--ITEM CARD TEMPLATE-->
+<ng-template #myItemTemplate let-dataItem>
+ <p>{{dataItem.jsonData.name}}</p>;
+</ng-template>;
 
-\&lt;!--ITEM CARD TEMPLATE--\&gt;
-\&lt;ng-template #myItemTemplate let-dataItem\&gt;
-  \&lt;p\&gt;{{dataItem.jsonData.name}}\&lt;/p\&gt;
-\&lt;/ng-template\&gt;
-
-\&lt;!-- POINTER PANEL LIST --\&gt;
-\&lt;pointer-panel-list [itemTemplate]=&quot;myItemTemplate&quot;
-                    [itemDetailsTemplate]=&quot;myItemDetailsTemplate&quot;
-                    [dataSource]=&quot;$cards&quot;\&gt;
-\&lt;/pointer-panel-list\&gt;
+<!-- POINTER PANEL LIST -->;
+<pointer-panel-list [itemTemplate]='myItemTemplate'
+                    [itemDetailsTemplate]='myItemDetailsTemplate'
+                    [dataSource]='$cards'/>
+</pointer-panel-list>;
 
 …in the .ts file
 
-**public** cards: Array\&lt;StarWarsModel\&gt; = **new** Array\&lt;StarWarsModel\&gt;();
-$cards = of( **this**.cards);
-
+public cards: Array<StarWarsModel> = new Array<StarWarsModel>();
+$cards = of( this.cards);
+'''
 ### Managing Data
 
 Pointer panel uses IteratableDiffer based checking to realize if the underlying data has changed to update the UI so your data changes such as adding or removing a record can be inline or return a new collection. For instance, use push, splice, spread, or slice.
