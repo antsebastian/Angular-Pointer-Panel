@@ -20,17 +20,18 @@ Pointer Panel requires a collection of items and two templates as shown below.
  <p>{{dataItem.jsonData.name}}</p>;
 </ng-template>;
 
-<!-- POINTER PANEL LIST -->;
+<!-- POINTER PANEL LIST -->
 <pointer-panel-list [itemTemplate]='myItemTemplate'
                     [itemDetailsTemplate]='myItemDetailsTemplate'
                     [dataSource]='$cards'/>
-</pointer-panel-list>;
+</pointer-panel-list>
 
 …in the .ts file
 
 public cards: Array<StarWarsModel> = new Array<StarWarsModel>();
 $cards = of( this.cards);
-'''
+ ```
+ 
 ### Managing Data
 
 Pointer panel uses IteratableDiffer based checking to realize if the underlying data has changed to update the UI so your data changes such as adding or removing a record can be inline or return a new collection. For instance, use push, splice, spread, or slice.
