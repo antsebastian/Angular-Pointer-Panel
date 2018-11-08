@@ -1,6 +1,6 @@
 ### Pointer Panel – An Angular 6 Component
 
-The pointer panel is a master/detail component that displays a wrapped list of cards and shows details of the selected card. It has a responsive layout and uses the current material theme. I got the idea from Google images and am using this component as a learning experience and for my portfolio.
+The pointer panel is a master/detail component that displays a wrapped list of cards and shows details of the selected card. It has a responsive layout and uses the current material theme. I got the idea from Google images and am using this component mainly for my portfolio.
 
 Live Demo: https://pointerpaneldemo2.firebaseapp.com/
 
