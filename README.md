@@ -48,12 +48,12 @@ Pointer panel should display properly on all devices.
 
 ### Dependencies
 
-Angular 6 and Material.
+Angular 6, Material and ngFlex
 
-Future Features
+### Future Features
 
 Below are the features I would add next:
 
-1. 1)Add ability to show details in column. Would work better for wide screens. It could auto detect or be set via properties.
-2. 2)Add configurable height to details panel.
-3. 3)Add virtualization to the list.
+1. Add ability to show details in column. Would work better for wide screens. It could auto detect or be set via properties.
+2. Add configurable height to details panel.
+3. Add virtualization to the list.
