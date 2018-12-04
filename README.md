@@ -57,3 +57,4 @@ Below are the features I would add next:
 1. Add ability to show details in column. Would work better for wide screens. It could auto detect or be set via properties.
 2. Add configurable height to details panel.
 3. Add virtualization to the list.
+4. Add keyboard support to navigate and select the cards.
