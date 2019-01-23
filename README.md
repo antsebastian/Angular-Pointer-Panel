@@ -34,7 +34,7 @@ cards$ = of( this.cards);
  
 ### Managing Data
 
-Pointer panel uses IteratableDiffer based checking to realize if the underlying data has changed to update the UI so your data changes such as adding or removing a record can be inline or return a new collection. For instance, use push, splice, spread, or slice.
+Pointer panel uses IteratableDiffer based checking to realize if the underlying data has changed to update the UI so your data changes such as adding or removing a record can be inline or return a new collection. For instance, use push, splice, spread, or slice to modify the data source and the pointer panel will update automatically.
 
 dataSource can be and Array or an observable, if an Array is used then pointer panel will make its own observable.
 
