@@ -23,7 +23,7 @@ Pointer Panel requires a collection of items and two templates as shown below.
 <!-- POINTER PANEL LIST -->
 <pointer-panel-list [itemTemplate]='myItemTemplate'
                     [itemDetailsTemplate]='myItemDetailsTemplate'
-                    [dataSource]='$cards'/>
+                    [dataSource]='cards$'/>
 </pointer-panel-list>
 
 …in the .ts file
