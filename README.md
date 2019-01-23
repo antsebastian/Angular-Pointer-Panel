@@ -29,7 +29,7 @@ Pointer Panel requires a collection of items and two templates as shown below.
 …in the .ts file
 
 public cards: Array<StarWarsModel> = new Array<StarWarsModel>();
-$cards = of( this.cards);
+cards$ = of( this.cards);
  ```
  
 ### Managing Data
