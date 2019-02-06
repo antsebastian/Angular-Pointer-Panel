@@ -36,7 +36,7 @@ cards$ = of( this.cards);
 
 Pointer panel uses IteratableDiffer based checking to realize if the underlying data has changed to update the UI so your data changes (such as adding or removing a record) can be inline or return a new collection. For instance, use push, splice, spread, or slice to modify the data source and the pointer panel will update automatically.
 
-dataSource can be and array or an observable, if an array is used then pointer panel will make its own observable.
+dataSource can be an array or an observable, if an array is used then pointer panel will make its own observable.
 
 ### Themes and styles
 
