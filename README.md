@@ -12,12 +12,12 @@ Pointer Panel requires a collection of items and two templates as shown below.
 ```html
 <!--ITEM DETAILS TEMPLATE-->
 <ng-template #myItemDetailsTemplate let-dataDetails>
-  <p>{{dataDetails.jsonData.fullDesc}}</p>
+  <p>{{dataDetails?.jsonData.fullDesc}}</p>
 <ng-template>
 
 <!--ITEM CARD TEMPLATE-->
 <ng-template #myItemTemplate let-dataItem>
- <p>{{dataItem.jsonData.name}}</p>;
+ <p>{{dataItem?.jsonData.name}}</p>;
 </ng-template>;
 
 <!-- POINTER PANEL LIST -->
